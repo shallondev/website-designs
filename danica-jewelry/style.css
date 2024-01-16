@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+  }
+
+/* colors */
+:root {
+    --soft-orange: hsl(40, 30%, 70%);
+    --soft-grey: hsl(0, 0%, 80%);
+    --lighter-green: hsl(120, 20%, 70%);
+    --soft-red: hsl(0, 50%, 80%);
+    --hard-red: hsl(0, 60%, 70%);
+}
+
+html {
+    font-family: 'Times New Roman', sans-serif;
+    background-color: var(--soft-grey);
+  }
+
+/* Disable mobile nav by default */
+#mobile-nav {
+    display: none;
+}
+
+/* Desktop nav */
+.nav-bar {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    list-style: none;
+    height: 10vh;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    font-size: 1.5rem;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#name {
+    color: var(--soft-red);
+    font-size: 30px;
+}
+/* End of Desktop Nav */
+
+
+/* Landing Section */
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.image-container {
+    position: relative;
+    background: linear-gradient(-45deg, var(--lighter-green), var(--soft-orange)); 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 0vh;
+    animation: scale 15s;
+}
+@keyframes scale {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.overlay {
+    z-index: 1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: hsla(0, 0%, 0%, 0.1);
+}
+
+.landing-text {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.firstWord {
+    color: var(--soft-red);
+}
+
+.reachout-cta {
+    border: 2px solid var(--soft-red);
+    width: 175px;
+    padding: 30px;
+    margin-top: 20px;
+}
+.reachout-cta:hover {
+    background-color: var(--soft-grey);
+}
+
+.reachout-text {
+    color: white;
+}
+
+.showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 55%;
+    width: 50%; 
+}
+
+.image-showcase {
+    width: 550px;
+    height: 550px;
+    background: white;
+    position: absolute;
+    box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+    border-radius: 10px;
+    margin: 10%;
+    background-image: url(images/showcase.jpg);
+    background-size: cover;
+    background-position: left center;
+}
+
+@media screen and (max-width: 1350px) {
+    .image-showcase {
+        display: none;
+    }
+}
+
+/* Ending of Landing Section */
+
+/* Project Section */
+.project-container {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.project-header {
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: var(--hard-red);
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.jew1-project {
+    width: 400px;
+    height: 600px;
+    background: white;
+    position: relative;
+    box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+    border-radius: 10px;
+    margin: 50px;
+    background-image: url(images/piece1.JPG);
+    background-size: cover;
+    background-position: left center;
+}
+
+.jew2-project {
+    width: 400px;
+    height: 600px;
+    background: white;
+    position: relative;
+    box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+    border-radius: 10px;
+    margin: 50px;
+    background-image: url(images/piece2.JPG);
+    background-size: cover;
+    background-position: left center;
+}
+
+.jew3-project {
+    width: 400px;
+    height: 600px;
+    background: white;
+    position: relative;
+    box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+    border-radius: 10px;
+    margin: 50px;
+    background-image: url(images/piece3.JPG);
+    background-size: cover;
+    background-position: left center;
+}
+
+.text-container {
+    position: absolute;
+    height: 75px;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    background-color: hsl(120, 10%, 50%);
+    overflow: hidden;
+}
+.text-container:hover {
+    height: 250px;
+}
+
+.name {
+    margin-top: 10px;
+    color: black;
+    font-size: 2rem;
+}
+
+.content {
+    padding: 25px 0;
+    color: black;
+}
+/* End of Porject Section */
+
+/* About Section */
+
+.about-container {
+    margin: 10%;
+    width: 80%;
+    height: auto;
+    background-color: hsl(120, 10%, 50%);
+    box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.about-image {
+    height: 450px;
+    width: 400px;
+    background-image: url(images/me.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.about-text {
+    height: auto;
+    width: 40%;
+    font-size: 1.5rem;
+    margin-left: 100px;
+}
+/* End of About */
+
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    width: 30%;
+    margin: 25% 35%;
+    padding-top: 30px; 
+    color: var(--hard-red);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        display: block;
+    }
+
+    .mobile-nav-bar {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        z-index: 5;
+    }
+
+    ul {
+        background-color: hsla(120, 10%, 50%, 0.625);
+    }
+
+    .jew1-project {
+        width: 250px;
+        height: 400px;
+        background: white;
+        position: relative;
+        box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+        border-radius: 10px;
+        margin: 50px;
+        background-image: url(images/piece1.JPG);
+        background-size: cover;
+        background-position: left center;
+    }
+    
+    .jew2-project {
+        width: 250px;
+        height: 400px;
+        background: white;
+        position: relative;
+        box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+        border-radius: 10px;
+        margin: 50px;
+        background-image: url(images/piece2.JPG);
+        background-size: cover;
+        background-position: left center;
+    }
+    
+    .jew3-project {
+        width: 250px;
+        height: 400px;
+        background: white;
+        position: relative;
+        box-shadow: -15px 7px 30px hsla(0, 0%, 0%, 0.2);
+        border-radius: 10px;
+        margin: 50px;
+        background-image: url(images/piece3.JPG);
+        background-size: cover;
+        background-position: left center;
+    }
+
+    .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(120, 10%, 50%);
+        box-shadow: 15px 7px 30px 7px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-image {
+        margin-top: 20px;
+        height: 300px;
+        width: 225px;
+        background-image: url(images/me.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
